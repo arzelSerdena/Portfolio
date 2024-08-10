@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -19,145 +19,193 @@
   </head>
 
   <body>
-    <!---------header--------->
-    <header>
-      <a href="index.html" class="logo">Arzel.</a>
-      <nav>
-        <input type="checkbox" id="sidebar-active" />
-        <label for="sidebar-active" class="open-sidebar-button">
-          <i class="bi bi-list"></i>
-        </label>
-        <div class="navbar-container">
-          <label for="sidebar-active" class="close-sidebar-button">
-            <i class="bi bi-x"></i>
-          </label>
-          <div>
-            <a href="index.html" class="home-link active">HOME</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="blog.html">BLOG</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
-          </div>
-        </div>
-      </nav>
-      <button class="resume-btn">Resume</button>
-    </header>
-    <!---------home--------->
-    <section class="home">
-      <div class="home-text">
-        <h1>Hi, it's <span>Arzel</span></h1>
-        <h3>I am a <span>Computer Engineering Student</span></h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-          temporibus quam molestiae! Nemo magni adipisci fugiat! Odit delectus
-          corporis, nisi molestiae nulla, repellat reprehenderit aliquid
-          explicabo maxime cumque nemo quidem!
-        </p>
-        <div class="social-icons">
-          <a href="https://twitter.com/rzl_s"><i class="bi bi-envelope"></i></a>
-          <a href="https://github.com/arzelSerdena"
-            ><i class="bi bi-github"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/arzel-serde%C3%B1a-93a623269/"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-          <a href="https://instagram.com/_rzl_s"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a href="https://twitter.com/rzl_s"
-            ><i class="bi bi-twitter-x"></i
-          ></a>
-        </div>
-        <button class="resume-home-btn">
-          Resume <i class="bi bi-download"></i>
-        </button>
-      </div>
+<!------------particle background---------->
 
-      <img
-        src="images/profile_placeholder.png"
-        alt="Arzel Serdeña"
-        class="profile-img"
-      />
-    </section>
-    <!---------projects--------->
-    <section class="projects">
-      <div class="horizontal-scroll">
-        <div class="horizontal-scroll-item">
-          <div class="hs-text-container">
-            <h1 class="projects-number">01</h1>
-            <h1 class="project-name">Project Name</h1></a>
-            <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            et quasi ipsum in ratione tempore, similique, eveniet numquam.
-            </p>
-            <div class="project-lang">
-              <h3>HTML</h3>
-              <h3>CSS</h3>
-              <h3>JavaScript</h3>
-            </div>
-            <hr>
-            <div class="project-redirect">
-              <a href=""><i class="bi bi-arrow-up-right redirect-icons"></i></a>
-              <a href=""><i class="bi bi-github redirect-icons"></i></a>
-            </div>
+  <!---<div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>--->
+
+
+    <!------------header---------->
+
+
+    <header>
+      
+      <nav>
+        <a href="" class="gradient-text logo">Arzel</a>
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="bi bi-list" onclick="changeImage()" id="icon"></i>
+          </label>
+          <ul>
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="#" class="">PROJECTS</a></li>
+            <li><a href="#" class="">BLOG</a></li>
+            <li><a href="#" class="">ABOUT</a></li>
+            <li><a href="#" class="">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="bi bi-x" onclick="showMenu()"></i>
+      </nav>
+    </header>
+
+
+    <!------------home page---------->
+
+
+    <section class="home">
+      <div class="home-home">
+        <div class="home-content">
+          <h1>Hi, It's <span class="gradient-text">Arzel</span></h1>
+          <h3>
+            I'm a <span class="gradient-text">Computer Engineering Student</span>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex eacommodo consequat.
+          </p>
+          <div class="social-icons">
+            <a href="https://github.com/arzelSerdena"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/arzel-serde%C3%B1a-93a623269/"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="https://instagram.com/_rzl_s"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="https://twitter.com/rzl_s"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
           </div>
-          <img src="images/brand1.png" alt="" />
+          <a href="" class="btn">Download CV<i class="bi bi-download"></i></a>
           
         </div>
-        <div class="horizontal-scroll-item">
-          <div class="hs-text-container">
-            <h1 class="projects-number">02</h1>
-            <h1 class="project-name">Project Name</h1></a>
-            <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            et quasi ipsum in ratione tempore, similique, eveniet numquam.
-            </p>
-            <div class="project-lang">
-              <h3>HTML</h3>
-              <h3>CSS</h3>
-              <h3>JavaScript</h3>
-            </div>
-            <hr>
-            <div class="project-redirect">
-              <a href=""><i class="bi bi-arrow-up-right redirect-icons"></i></a>
-              <a href=""><i class="bi bi-github redirect-icons"></i></a>
-            </div>
-          </div>
-          <img src="images/brand1.png" alt="" />
-          
-        </div>
-        <div class="horizontal-scroll-item">
-          <div class="hs-text-container">
-            <h1 class="projects-number">02</h1>
-            <h1 class="project-name">Project Name</h1></a>
-            <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            et quasi ipsum in ratione tempore, similique, eveniet numquam.
-            </p>
-            <div class="project-lang">
-              <h3>HTML</h3>
-              <h3>CSS</h3>
-              <h3>JavaScript</h3>
-            </div>
-            <hr>
-            <div class="project-redirect">
-              <a href=""><i class="bi bi-arrow-up-right redirect-icons"></i></a>
-              <a href=""><i class="bi bi-github redirect-icons"></i></a>
-            </div>
-          </div>
-          <img src="images/brand1.png" alt="" />
-          
+        <div class="profile-img">
+          <img src="images/profile_placeholder.png" alt="Arzel Serdeña" />
         </div>
         
-
+  
+        <!------------home page: infinite scroll---------->
+  
+        
+      </div>
+      <div class="inifinite-scroll-container">
+        <div class="infinite-scroll" style="--t:20s">
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Java</span>
+            <span>C#</span>
+            <span>Python</span>
+            <span>C++</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Java</span>
+            <span>C#</span>
+            <span>Python</span>
+            <span>C++</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Java</span>
+            <span>C#</span>
+            <span>Python</span>
+            <span>C++</span>
+          </div>
+          <div>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Java</span>
+            <span>C#</span>
+            <span>Python</span>
+            <span>C++</span>
+          </div>
+        </div>
+  
+      </div>
 
     </section>
-    <!---------blog--------->
+
+
+    <!------------projects page---------->
+
+
+    <section class="pojects-pg">
+      <div><h1 class="pg-title block">PROJECTS</h1></div>
+      <div class="horizontal-scroll block">
+        <div class="horizontal-scroll-item">
+          <h1 class="gradient-text">Project Name</h1></a>
+          <h3>HTML, CSS, JavaScript</h3>
+          <img src="images/brand1.png" alt="" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            et quasi ipsum in ratione tempore, similique, eveniet numquam.
+          </p>
+        </div>
+        <div class="horizontal-scroll-item">
+          <h1 class="gradient-text">Project Name</h1>
+          <h3>HTML, CSS, JavaScript</h3>
+          <img src="images/brand1.png" alt="" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            et quasi ipsum in ratione tempore, similique, eveniet numquam.
+          </p>
+        </div>
+        <div class="horizontal-scroll-item">
+          <h1 class="gradient-text">Project Name</h1>
+          <h3>HTML, CSS, JavaScript</h3>
+          <img src="images/brand1.png" alt="" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            et quasi ipsum in ratione tempore, similique, eveniet numquam.
+          </p>
+        </div>
+        <div class="horizontal-scroll-item">
+          <h1 class="gradient-text">Project Name</h1>
+          <h3>HTML, CSS, JavaScript</h3>
+          <img src="images/brand1.png" alt="" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            et quasi ipsum in ratione tempore, similique, eveniet numquam.
+          </p>
+        </div>
+        <div class="horizontal-scroll-item">
+          <h1 class="gradient-text">Project Name</h1>
+          <h3>HTML, CSS, JavaScript</h3>
+          <img src="images/brand1.png" alt="" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            et quasi ipsum in ratione tempore, similique, eveniet numquam.
+          </p>
+        </div>
+        <div class="horizontal-scroll-item">
+          <h1 class="gradient-text">Project Name</h1>
+          <h3>HTML, CSS, JavaScript</h3>
+          <img src="images/brand1.png" alt="" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            et quasi ipsum in ratione tempore, similique, eveniet numquam.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!------------blog page---------->
+
+
     <section class="blog">
+      <h1 class="pg-title block">BLOG</h1>
       <div  class="blog-item block"><div>
         <h3><span>08 August 2024</span> | <span>Web Page</span></h3>
         <h1 class="gradient-item">Blog title</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum molestiae, id optio ad eligendi debitis tenetur nisi vero itaque ipsum mollitia nostrum eum atque autem voluptatibus? Sunt non vero velit.</p><a href=""><p>Read More</p></a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum molestiae, id optio ad eligendi debitis tenetur nisi vero itaque ipsum mollitia nostrum eum atque autem voluptatibus? Sunt non vero velit.</p><a href="">Read More</a>
       </div>
       <div><img src="images/brand1.png" alt=""></div></div>
       <div  class="blog-item block"><div>
@@ -178,10 +226,15 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum molestiae, id optio ad eligendi debitis tenetur nisi vero itaque ipsum mollitia nostrum eum atque autem voluptatibus? Sunt non vero velit.</p><a href=""><p>Read More</p></a>
       </div>
       <div><img src="images/brand1.png" alt=""></div></div>
-
     </section>
-    <!---------about--------->
+
+
+    <!------------about me page---------->
+
+
     <section class="about">
+      <h1 class="pg-title block">ABOUT</h1>
+
 
       <!------------about me page: nav container---------->
 
@@ -294,11 +347,73 @@
           </div>
         </div>
       </div>
+    </section>
+
+
+    <!------------contact page---------->
+
+
+    <section class="contact">
+      <div><h1 class="pg-title block">CONTACT</h1></div>
+        <div class="contact-col block">
+          <form action="form-handler.php" method="post">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Your Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Enter your subject"
+              required
+            />
+            <textarea
+              rows="8"
+              name="message"
+              placeholder="Your message..."
+              required
+            ></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
 
     </section>
-    <!---------contact--------->
-    <section class="contact"></section>
-    <!---------footer--------->
-    <footer></footer>
+
+
+    <!------------footer---------->
+
+    
+    <footer>
+      
+        <div>
+          <a class="logo gradient-text" href="index.html">Arzel</a>
+        </div>
+        <div>
+          <div class="social-icons">
+            <a href="https://github.com/arzelSerdena"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/arzel-serde%C3%B1a-93a623269/"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="https://instagram.com/_rzl_s"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="https://twitter.com/rzl_s"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+          </div>
+        </div>
+
+    </footer>
   </body>
 </html>
