@@ -194,7 +194,7 @@
           <input type="radio" name="about-indicator" id="certifications">
           <input type="radio" name="about-indicator" id="leadership">
           <div class="list">
-            <label for="education" class="education"><i class="bi bi-journals"></i><span class="category">Education</span></label>
+            <label for="education" class="education-label"><i class="bi bi-journals"></i><span class="category">Education</span></label>
             <label for="work" class="work"><i class="bi bi-person-workspace"></i><span class="category">Work</span></label>
             <label for="skills" class="skills"><i class="bi bi-puzzle"></i><span class="category">Skills</span></label>
             <label for="certifications" class="certifications"><i class="bi bi-patch-check"></i><span class="category">Certifications</span></label>
@@ -207,23 +207,32 @@
 
 
           <div class="category-content">
-            <div class="education text"><div class="education-text-container">
-              <h3 class="gradient-text">Polytechnic University of the Philippines Biñan Campus</h3>
-              <address>Brgy. Zapote, City of Biñan, Laguna, Philippines</address>
-              <h4 class="gradient-text">Bachelor of Science in Computer Engineering</h4>
-              <h5>September 2022 - Expected October 2026</h5>
-            </div><div class="education-text-container">
-              <h3 class="gradient-text">Immaculate Heart of Mary Academy, Inc.</h3>
-              <address>Zone II, Madrid Boulevard, Pinamalayan, Oriental Mindoro, Philippines</address>
-              <h4 class="gradient-text">Science, Technology, Engineering and Mathematics (STEM) Strand</h4>
-              <h5>June 2020 - March 2022</h5>
+          <div class="education text">
+            <div class="education-text-content">
+              <div class="education-text-container">
+                <h3 class="gradient-text">Polytechnic University of the Philippines Biñan Campus</h3>
+                <address>Brgy. Zapote, City of Biñan, Laguna, Philippines</address>
+                <h4 class="gradient-text">Bachelor of Science in Computer Engineering</h4>
+                <h5>September 2022 - Expected October 2026</h5>
+              </div>
             </div>
-            <div class="education-text-container">
-              <h3 class="gradient-text">Immaculate Heart of Mary Academy, Inc.</h3>
-              <address>Zone II, Madrid Boulevard, Pinamalayan, Oriental Mindoro, Philippines</address>
-              <h4 class="gradient-text">Junior High School</h4>
-              <h5>June 2016 - March 2020</h5>
-            </div></div>
+            <div class="education-text-content">
+              <div class="education-text-container">
+                <h3 class="gradient-text">Polytechnic University of the Philippines Biñan Campus</h3>
+                <address>Brgy. Zapote, City of Biñan, Laguna, Philippines</address>
+                <h4 class="gradient-text">Bachelor of Science in Computer Engineering</h4>
+                <h5>September 2022 - Expected October 2026</h5>
+              </div>
+            </div>
+            <div class="education-text-content">
+              <div class="education-text-container">
+                <h3 class="gradient-text">Polytechnic University of the Philippines Biñan Campus</h3>
+                <address>Brgy. Zapote, City of Biñan, Laguna, Philippines</address>
+                <h4 class="gradient-text">Bachelor of Science in Computer Engineering</h4>
+                <h5>September 2022 - Expected October 2026</h5>
+              </div>
+            </div>
+          </div>
 
 
             <!------------about me page: nav content: work---------->
@@ -249,7 +258,7 @@
             <!------------about me page: nav content: certifications---------->
 
 
-            <div class="certifications text">
+            <div class="certifications-container text">
               <div class="certifications-text-container">
                 <img src="images/brand1.png" alt="" class="certs">
                 <h3 class="gradient-text">Name of Certifications</h3>
@@ -297,7 +306,72 @@
 
     </section>
     <!---------contact--------->
-    <section class="contact"></section>
+    <section class="contact">
+      <div><h1 class="pg-title block">Let's connect</h1></div>
+<div class="contact-container">
+  <div class="socials-col">
+    <h4>
+      My social networks:
+    </h4>
+    <div class="social-icons">
+      <a href="https://twitter.com/rzl_s"><i class="bi bi-envelope"></i></a>
+      <a href="https://github.com/arzelSerdena"
+        ><i class="bi bi-github"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/arzel-serde%C3%B1a-93a623269/"
+        ><i class="bi bi-linkedin"></i
+      ></a>
+      <a href="https://instagram.com/_rzl_s"
+        ><i class="bi bi-instagram"></i
+      ></a>
+      <a href="https://twitter.com/rzl_s"
+        ><i class="bi bi-twitter-x"></i
+      ></a>
+    </div>
+    <h4>
+      Contact me with:
+    </h4>
+    <div class="social-icons">
+      <a href="https://twitter.com/rzl_s"><i class="bi bi-envelope"></i></a>
+      <a href="https://twitter.com/rzl_s"
+        ><i class="bi bi-whatsapp"></i
+      ></a>
+    </div>
+    
+  </div>
+  <div class="contact-col block">
+    <form action="form-handler.php" method="post">
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter Your Name"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+      />
+      <input
+        type="text"
+        name="subject"
+        placeholder="Enter your subject"
+        required
+      />
+      <textarea
+        rows="8"
+        name="message"
+        placeholder="Your message..."
+        required
+      ></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</div>
+
+</div>
+    </section>
     <!---------footer--------->
     <footer></footer>
   </body>

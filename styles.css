@@ -346,7 +346,7 @@ nav .close-sidebar-button {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(700px, 1fr)
+    minmax(600px, 1fr)
   ); /* Flexible columns */
   gap: 2rem; /* Space between grid items */
   justify-content: center; /* Center grid items horizontally */
@@ -392,22 +392,33 @@ nav .close-sidebar-button {
 /*----------about: all---------*/
 
 .about {
-  padding: var(--section-padding);
+  padding: 0rem 10%;
+  min-height: 100vh; /* Set a minimum height for the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-container {
-  font-size: 30px;
+  min-width: 100%; /* Make sure the container takes full width */
+  /* Set a max width to avoid excessive stretching on large screens */
+  height: 100%;
   font-weight: 500;
   transition: 0.3s ease-in-out;
-  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 /*----------about: nav container---------*/
 
 .about-container .about-content {
   display: flex;
-  transition: 0.3s ease-in-out;
-  justify-content: space-between;
+  justify-content: space-between; /* Centers the content horizontally */
+  gap: 5em;
+  align-items: flex-start; /* Aligns the content to the top vertically */
+  width: 100%;
+  min-height: 80vh;
 }
 
 .about-content .category-content .text {
@@ -421,45 +432,44 @@ nav .close-sidebar-button {
   display: flex;
   position: relative;
   flex-direction: column;
+  align-items: flex-start;
+
   transition: 0.3s ease-in-out;
 }
 
 .about-content .list label {
   cursor: pointer;
   height: 4rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: 25%;
   border-radius: 1.5rem;
-  line-height: 4rem;
+  line-height: 3rem;
   padding-left: 2rem;
-  color: #fff;
+  color: var(--clr-text);
   z-index: 12;
   transition: all 0.4s ease;
-  letter-spacing: -0.5px;
   display: flex;
+  font-weight: 500;
 }
 
 .about-content .list .bi {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-right: 1rem;
 }
 
 .list i {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .about-content .about-indicator {
   position: absolute;
   background: var(--clr-accent);
-  height: 4rem;
+  height: 3rem;
   width: 115%;
   left: 0;
   transition: all 0.4s ease;
   align-items: center;
   justify-content: center;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   transition: 0.3s ease-in-out;
 }
 
@@ -469,15 +479,25 @@ nav .close-sidebar-button {
   width: 80%;
   height: 100%;
   transition: 0.3s ease-in-out;
-  padding-left: 4rem;
 }
 
 #education:checked ~ .category-content .education,
 #work:checked ~ .category-content .work,
-#skills:checked ~ .category-content .skills,
-#certifications:checked ~ .category-content .certifications,
-#leadership:checked ~ .category-content .leadership {
+#skills:checked ~ .category-content .skills {
   display: block;
+}
+
+#certifications:checked ~ .category-content .certifications-container,
+#leadership:checked ~ .category-content .leadership {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Flexible columns */
+  gap: 1rem; /* Space between grid items */
+  justify-content: center; /* Center grid items horizontally */
+  align-items: center; /* Center grid items vertically */
+  align-content: center;
 }
 
 #work:checked ~ .category-content .home,
@@ -488,34 +508,34 @@ nav .close-sidebar-button {
 }
 
 #education:checked ~ .list .about-indicator,
-#education:checked ~ .list .education {
+#education:checked ~ .list .education-label {
   top: 0px;
-  color: #23272e;
-  font-weight: 700;
+  color: var(--clr-darkest-black);
+  font-weight: 500;
 }
 #work:checked ~ .list .about-indicator,
 #work:checked ~ .list .work {
   top: 64px;
-  color: #23272e;
-  font-weight: 700;
+  color: var(--clr-darkest-black);
+  font-weight: 500;
 }
 #skills:checked ~ .list .about-indicator,
 #skills:checked ~ .list .skills {
   top: 128px;
-  color: #23272e;
-  font-weight: 700;
+  color: var(--clr-darkest-black);
+  font-weight: 500;
 }
 #certifications:checked ~ .list .about-indicator,
 #certifications:checked ~ .list .certifications {
   top: 192px;
-  color: #23272e;
-  font-weight: 700;
+  color: var(--clr-darkest-black);
+  font-weight: 500;
 }
 #leadership:checked ~ .list .about-indicator,
 #leadership:checked ~ .list .leadership {
   top: 256px;
-  color: #23272e;
-  font-weight: 700;
+  color: var(--clr-darkest-black);
+  font-weight: 500;
 }
 
 /*----------about: nav container; content: skills---------*/
@@ -544,7 +564,6 @@ nav .close-sidebar-button {
 .bar span {
   height: 1.1rem;
   float: left;
-  background: var(--clr-accent);
   border-radius: 2rem;
 }
 
@@ -635,28 +654,44 @@ nav .close-sidebar-button {
   color: #fff;
 }
 
+.education {
+  border-left: 2px solid var(--clr-accent);
+}
+
 .education-text-container {
-  text-align: left;
   background: var(--clr-light-black);
   border-radius: 20px;
-  padding: 1.5rem;
   transition: 0.3s ease-in-out;
   padding: 2rem;
   margin-bottom: 1.5rem;
+}
+
+.education-text-content {
+  position: relative;
+  padding-left: 3em;
+}
+
+.education-text-content:before {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-color: var(--clr-accent);
+  border: 2px solid var(--clr-accent);
+  border-radius: 50%;
+  position: absolute;
+  top: 1em;
+  left: -12px;
 }
 
 /*----------about: nav container; content: certifications---------*/
 
 .certifications-text-container {
   position: relative;
-  display: inline-block;
-  justify-content: space-between;
   background: var(--clr-light-black);
-  border-radius: 20px;
+  border-radius: 2rem;
   padding: 2rem;
   transition: 0.3s ease-in-out;
-  max-width: 30%;
-  margin: 0 1rem 1rem 0;
   text-align: center;
 }
 
@@ -683,14 +718,12 @@ nav .close-sidebar-button {
 /*----------about: nav container; content: leadership---------*/
 
 .leadership-text-container {
-  display: inline-block;
+  position: relative;
   background: var(--clr-light-black);
-  border-radius: 20px;
+  border-radius: 2rem;
   padding: 2rem;
   transition: 0.3s ease-in-out;
-  margin: 0 1rem 2rem 0;
   text-align: center;
-  width: 30%;
 }
 
 .leadership-text-container img {
@@ -711,6 +744,92 @@ nav .close-sidebar-button {
   color: #fff;
   font-weight: 300;
   font-style: italic;
+}
+
+/*----------contact page---------*/
+
+.contact {
+  padding: 2rem 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact h1 {
+  color: var(--clr-accent);
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  width: 100%;
+  height: 100%;
+}
+
+.socials-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.socials-col h4 {
+  color: var(--clr-text);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.socials-col a {
+  color: var(--clr-text);
+  border: 2px solid var(--clr-text);
+  margin-bottom: 1.5em;
+}
+
+.contact-col {
+  flex-basis: 70%;
+  margin-bottom: 30px;
+}
+.contact-col div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-col div .fa {
+  font-size: 28px;
+  margin: 10px;
+  margin-right: 30px;
+  color: #f44336;
+}
+
+.contact-col div p {
+  padding: 0;
+}
+
+.contact-col div h5 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #555;
+  font-weight: 400;
+}
+
+.contact-col input,
+.contact-col textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border-style: none;
+  box-sizing: border-box;
+  border-radius: 2rem;
+  background-color: var(--clr-light-black);
+}
+
+.contact .contact-col button {
+  border-style: none;
 }
 
 /*-------small screens config--------*/
