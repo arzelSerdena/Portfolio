@@ -16,13 +16,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="app.js"></script>
   </head>
 
   <body>
     <!---------header--------->
-    <header>
-      <a href="index.html" class="logo">Arzel.</a>
+    <header class="scrolled">
+      <a href="#home" class="logo">Arzel.</a>
       <nav>
         <input type="checkbox" id="sidebar-active" />
         <label for="sidebar-active" class="open-sidebar-button">
@@ -33,19 +32,20 @@
             <i class="bi bi-x"></i>
           </label>
           <div>
-            <a href="index.html" class="home-link active">HOME</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="blog.html">BLOG</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
+            <a href="#home" class="home-link active">HOME</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#blog">BLOG</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
           </div>
         </div>
       </nav>
-      <a href="https://drive.google.com/file/d/1TDVcQ7XsgHYchpSs9BghoeBhDCsW9ABM/view?usp=sharing"><button class="resume-btn" id="btn-btn">Resume</button></a>
+      <a class="btn-btn" href="https://drive.google.com/file/d/1TDVcQ7XsgHYchpSs9BghoeBhDCsW9ABM/view?usp=sharing"><button class="resume-btn" id="btn-btn">Resume</button></a>
     </header>
+    
     <!---------home--------->
-    <section class="home">
-      <img
+    <section class="home" id="home">
+      <img 3233
           src="images/profile-img.jpeg"
           alt="Arzel Serdeña"
           class="profile-img" id="profile-img1"
@@ -85,15 +85,24 @@
         alt="Arzel Serdeña"
         class="profile-img" id="profile-img2"
       />
+      <div class="waves-container">
+        <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+      </div>
     </section>
+
+      
+
     <!---------projects--------->
-    <section class="projects">
+    <section class="projects" id="projects">
       <div><h1 class="pg-title">Latest projects</h1></div>
       <div class="horizontal-scroll">
         <div class="horizontal-scroll-item">
           <div class="hs-text-container">
             <h1 class="projects-number">01</h1>
-            <h1 class="project-name">Project Name</h1></a>
+            <h1 class="project-name">Web Portfolio</h1></a>
             <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
             et quasi ipsum in ratione tempore, similique, eveniet numquam.
@@ -105,11 +114,11 @@
             </div>
             <hr>
             <div class="project-redirect">
-              <a href=""><i class="bi bi-arrow-up-right redirect-icons"></i></a>
-              <a href=""><i class="bi bi-github redirect-icons"></i></a>
+              <a href="https://arzelserdena.github.io/Portfolio/"><i class="bi bi-arrow-up-right redirect-icons"></i></a>
+              <a href="https://github.com/arzelSerdena/Portfolio"><i class="bi bi-github redirect-icons"></i></a>
             </div>
           </div>
-          <img src="images/brand1.png" alt="" />
+          <img src="images/project1.png" alt="" />
           
         </div>
         <div class="horizontal-scroll-item">
@@ -161,7 +170,7 @@
 
     </section>
     <!---------blog--------->
-    <section class="blog">
+    <section class="blog" id="blog">
     <div class="blog-label">
       <div><h1 class="pg-title">To get a little more information</h1></div>
     <div><a href="">More <i class="bi bi-arrow-right"></i></a></div>
@@ -195,7 +204,7 @@
 </div>
     </section>
     <!---------about--------->
-    <section class="about">
+    <section class="about" id="about">
       <div><h1 class="pg-title">Know more about me</h1></div>
 
       <!------------about me page: nav container---------->
@@ -329,7 +338,7 @@
 
     </section>
     <!---------contact--------->
-    <section class="contact">
+    <section class="contact" id="contact">
       <div><h1 class="pg-title">Let's connect</h1></div>
 <div class="contact-container">
   <div class="socials-col">
@@ -362,7 +371,8 @@
     
   </div>
   <div class="contact-col">
-    <form action="form-handler.php" method="post">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="3fce8735-16e1-4017-8932-939a37bf58c1">
       <input
         type="text"
         name="name"
@@ -387,7 +397,7 @@
         placeholder="Your message..."
         required
       ></textarea>
-      <button type="submit" class="resume-btn">Send Message</button>
+      <button type="submit" class="resume-btn">SUBMIT</button>
     </form>
     </div>
     </div>
@@ -440,5 +450,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
